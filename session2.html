@@ -183,75 +183,19 @@
     <!-- Main -->
     <main
         class="flex flex-col md:w-6/12 w-full min-h-screen bg-white 2xl:px-8 px-5 md:pt-16 pt-28 mg:rounded-3xl rounded-none shadow-xl">
-        <div class="md:mb-12 mb-16">
-            <h2 class="lg:text-2xl xs:text-xl text-lg font-bold lg:mb-2.5 xs:mb-1.5 mb-1">Payment</h2>
-            <p class="lg:text-sm text-xs leading-[16px] ml-2">
-                <span class="inline-block w-1 h-1 lg:mr-1.5 mr-1 mb-0.5 bg-black rounded-full"></span>
-                Please make sure that you already complete your information part
+        <div class="flex flex-col items-center md:px-0 xs:px-16 px-6 md:mb-10 mb-6 text-center">
+            <img src="./assets/icons/success.svg" alt="" class="lg:w-56 md:w-48 xs:w-36 w-32 md:mb-10 mb-8">
+            <h3 class="xl:text-3xl md:text-2xl text-lg font-bold md:mb-4 mb-3">Congratulations</h3>
+            <p class="md:text-base xs:text-sm text-xs md:mb-2 mb-1.5">
+                Now you recieve a new Payment
             </p>
-        </div>
-        <div class="flex flex-col items-center">
-            <h3 class="lg:text-2xl xs:text-xl text-lg font-bold lg:mb-10 md:mb-8 mb-6">Select payment method</h3>
-            <div class="flex lg:gap-4 xs:gap-2.5 gap-1.5 xs:mb-10 mb-8">
-                <button
-                    class="xl:w-44 lg:w-36 xs:w-28 w-24 bg-[#BC63F2] text-white xl:text-xl lg:text-lg xs:text-sm text-xs xs:font-normal font-medium xs:py-3 py-2 xs:rounded-xl rounded-lg">Paypal</button>
-                <button
-                    class="xl:w-44 lg:w-36 xs:w-28 w-24 bg-white text-[#BC63F2] border-solid border-[1px] border-[#BC63F2] xl:text-xl lg:text-lg xs:text-sm text-[11.5px] xs:font-normal font-medium xs:py-3 py-2 xs:rounded-xl rounded-lg">Bank
-                    Account</button>
-                <button
-                    class="xl:w-44 lg:w-36 xs:w-28 w-24 bg-white text-[#BC63F2] border-solid border-[1px] border-[#BC63F2] xl:text-xl lg:text-lg xs:text-sm text-xs xs:font-normal font-medium xs:py-3 py-2 xs:rounded-xl rounded-lg">Credit
-                    Card</button>
-            </div>
-            <div
-                class="flex justify-between xl:w-[34rem] lg:w-[27rem] xs:w-[22rem] w-[18rem] lg:h-10 h-7 lg:mb-8 mb-6 border-solid border-b-[1px] border-[#BC63F2]">
-                <span class="lg:text-sm xs:text-xs text-[11px]">Your card number</span>
-                <div class="flex self-center">
-                    <input type="tel"
-                        class="input-cardNumber numberInput lg:w-14 xs:w-12 w-10 text-center lg:text-base xs:text-sm text-xs font-semibold lg:tracking-[0.2rem] xs:tracking-[0.14rem] tracking-[0.10rem] outline-none"
-                        maxlength="4" autocomplete="off">
-                    <span
-                        class="xl:w-8 lg:w-3 xs:w-1.5 w-1 xl:mx-2 mx-[2px] mb-2 border-solid border-b-[1px] border-black"></span>
-                    <input type="tel"
-                        class="input-cardNumber numberInput lg:w-14 xs:w-12 w-10 text-center lg:text-base xs:text-sm text-xs font-semibold lg:tracking-[0.2rem] xs:tracking-[0.14rem] tracking-[0.10rem] outline-none"
-                        maxlength="4" autocomplete="off">
-                    <span
-                        class="xl:w-8 lg:w-3 xs:w-1.5 w-1 xl:mx-2 mx-[2px] mb-2 border-solid border-b-[1px] border-black"></span>
-                    <input type="tel"
-                        class="input-cardNumber numberInput lg:w-14 xs:w-12 w-10 text-center lg:text-base xs:text-sm text-xs font-semibold lg:tracking-[0.2rem] xs:tracking-[0.14rem] tracking-[0.10rem] outline-none"
-                        maxlength="4" autocomplete="off">
-                    <span
-                        class="xl:w-8 lg:w-3 xs:w-1.5 w-1 xl:mx-2 mx-[2px] mb-2 border-solid border-b-[1px] border-black"></span>
-                    <input type="tel"
-                        class="input-cardNumber numberInput lg:w-14 xs:w-12 w-10 text-center lg:text-base xs:text-sm text-xs font-semibold lg:tracking-[0.2rem] xs:tracking-[0.14rem] tracking-[0.10rem] outline-none"
-                        maxlength="4" autocomplete="off">
-                </div>
-            </div>
-            <div class="flex justify-between xl:w-[34rem] lg:w-[27rem] xs:w-[22rem] w-[18rem] lg:mb-14 md:mb-11 mb-10">
-                <div
-                    class="cvv2 flex justify-between lg:w-[8rem] xs:w-[6rem] w-[5.25rem] md:h-8 h-7 border-solid border-b-[1px] border-[#BC63F2]">
-                    <span class="lg:text-sm xs:text-xs text-[11px]">CVV2</span>
-                    <input type="tel"
-                        class="numberInput lg:w-14 xs:w-12 w-11 text-center lg:text-base xs:text-sm text-xs font-semibold lg:tracking-[0.2rem] xs:tracking-[0.15rem] tracking-[0.12rem] outline-none"
-                        maxlength="4" autocomplete="off">
-                </div>
-                <div
-                    class="year flex justify-between lg:w-[8rem] xs:w-[6rem] w-[5.25rem] md:h-8 h-7 border-solid border-b-[1px] border-[#BC63F2]">
-                    <span class="lg:text-sm xs:text-xs text-[11px]">Year</span>
-                    <input type="tel"
-                        class="numberInput lg:w-14 xs:w-12 w-11 text-center lg:text-base xs:text-sm text-xs font-semibold lg:tracking-[0.2rem] xs:tracking-[0.15rem] tracking-[0.12rem] outline-none"
-                        maxlength="2" autocomplete="off">
-                </div>
-                <div
-                    class="month flex justify-between lg:w-[8rem] xs:w-[6rem] w-[5.25rem] md:h-8 h-7 border-solid border-b-[1px] border-[#BC63F2]">
-                    <span class="lg:text-sm xs:text-xs text-[11px]">Month</span>
-                    <input type="tel"
-                        class="numberInput lg:w-14 xs:w-12 w-11 text-center lg:text-base xs:text-sm text-xs font-semibold lg:tracking-[0.2rem] xs:tracking-[0.15rem] tracking-[0.12rem] outline-none"
-                        maxlength="2" autocomplete="off">
-                </div>
-            </div>
+            <p class="md:text-base xs:text-sm text-xs md:mb-11 mb-7">
+                Please compelete payment in the right of this page, or you can see and do payment in <span class="font-bold">Payments page</span>
+            </p>
             <button
-                class="lg:w-60 xs:w-48 w-36 bg-[#BC63F2] text-white lg:text-xl xs:text-base text-sm xs:font-normal font-medium xs:py-3 py-2.5 mb-10 xs:rounded-xl rounded-lg">Pay
-                Now</button>
+                class="bg-[#BC63F2] text-white lg:text-xl xs:text-base text-sm xs:font-normal font-medium md:px-8 px-6 md:py-3.5 xs:py-3 py-2.5 xs:rounded-xl rounded-lg">
+                Book another Session
+            </button>
         </div>
     </main>
 

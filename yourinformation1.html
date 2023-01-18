@@ -10,6 +10,37 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./tailwind/output.css">
     <style>
+        #menu-desktop::-webkit-scrollbar {
+            width: 5px;
+            scroll-margin-right: 10px;
+        }
+
+        #menu-desktop::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        #menu-desktop::-webkit-scrollbar-thumb {
+            background: #a3a3a3;
+            border-radius: 100px;
+            scroll-margin-right: 10px;
+        }
+
+        #history-desktop::-webkit-scrollbar {
+            width: 5px;
+            scroll-margin-right: 10px;
+        }
+
+        #history-desktop::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        #history-desktop::-webkit-scrollbar-thumb {
+            background: #a3a3a3;
+            border-radius: 100px;
+            scroll-margin-right: 10px;
+        }
+    </style>
+    <style>
         .custom-select {
             position: relative;
             font-family: Arial;
@@ -56,25 +87,33 @@
             border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
             cursor: pointer;
         }
+
         @media (max-width: 1280px) {
+
             .select-items div,
             .select-selected {
                 padding-left: 1.75rem;
             }
         }
+
         @media (max-width: 1024px) {
+
             .select-items div,
             .select-selected {
                 padding-left: 1.5rem;
             }
         }
+
         @media (max-width: 768px) {
+
             .select-items div,
             .select-selected {
                 padding-left: 1.25rem;
             }
         }
+
         @media (max-width: 480px) {
+
             .select-items div,
             .select-selected {
                 padding-left: 0.75rem;
@@ -110,9 +149,10 @@
     <title>Your Information</title>
 </head>
 
-<body class="flex flex-wrap bg-[#F5F5F5] font-montserrat">
+<body class="flex flex-wrap justify-center bg-[#F5F5F5] font-montserrat">
     <!-- Menu Desktop -->
-    <nav class="md:flex hidden items-center flex-col w-3/12 min-h-screen">
+    <nav id="menu-desktop"
+        class="fixed left-0 inset-y-0 md:flex hidden items-center flex-col w-3/12 min-h-screen overflow-y-scroll">
         <div class="w-full flex flex-col items-center lg:mb-14 mb-11">
             <div
                 class="flex justify-center items-center w-[16.5rem] h-[16.5rem] border-solid border-[#062635]/5 border-[0.5px] rounded-full lg:scale-100 scale-75">
@@ -140,9 +180,11 @@
         <div class="w-full lg:pl-10 pl-6 lg:mb-10 mb-8">
             <dl class="mb-6">
                 <dt class="text-[#181818]/50 uppercase mb-5">Main</dt>
-                <dd class="lg:text-lg text-sm text-[#181818] font-bold lg:pl-6 pl-4 lg:mb-4 mb-3 cursor-pointer">Main
+                <dd class="lg:text-lg text-sm text-[#181818] font-bold lg:pl-6 pl-4 lg:mb-4 mb-3 cursor-pointer">
+                    Main
                 </dd>
-                <dd class="lg:text-lg text-sm text-[#181818] font-bold lg:pl-6 pl-4 lg:mb-4 mb-3 cursor-pointer">Session
+                <dd class="lg:text-lg text-sm text-[#181818] font-bold lg:pl-6 pl-4 lg:mb-4 mb-3 cursor-pointer">
+                    Session
                 </dd>
             </dl>
             <dl class="mb-1">
@@ -155,9 +197,11 @@
                 </dd>
                 <dd class="lg:text-lg text-sm text-[#181818] font-bold lg:pl-6 pl-4 lg:mb-4 mb-3 cursor-pointer">
                     Agreements</dd>
-                <dd class="lg:text-lg text-sm text-[#181818] font-bold lg:pl-6 pl-4 lg:mb-4 mb-3 cursor-pointer">Your
+                <dd class="lg:text-lg text-sm text-[#181818] font-bold lg:pl-6 pl-4 lg:mb-4 mb-3 cursor-pointer">
+                    Your
                     Information</dd>
-                <dd class="lg:text-lg text-sm text-[#181818] font-bold lg:pl-6 pl-4 lg:mb-4 mb-3 cursor-pointer">Tasks
+                <dd class="lg:text-lg text-sm text-[#181818] font-bold lg:pl-6 pl-4 lg:mb-4 mb-3 cursor-pointer">
+                    Tasks
                 </dd>
             </dl>
         </div>
@@ -244,155 +288,155 @@
     <!-- Main -->
     <main
         class="flex flex-col items-center md:w-6/12 w-full min-h-screen bg-white 2xl:px-12 px-5 md:pt-16 pt-28 mg:rounded-3xl rounded-none shadow-xl">
-        <div class="flex justify-center lg:gap-4 xs:gap-2.5 gap-2 xl:mb-24 md:mb-20 xs:mb-16 mb-12">
+        <div class="flex justify-center lg:gap-4 xs:gap-2.5 gap-1.5 xl:mb-22 md:mb-18 xs:mb-14 mb-10">
             <button
-                class="xl:w-44 lg:w-36 xs:w-28 w-[5.5rem] bg-[#BC63F2] text-white xl:text-xl lg:text-lg xs:text-sm text-[10px] xs:font-normal font-medium xs:py-3 py-2 xs:rounded-xl rounded-lg">Personal</button>
+                class="xl:w-44 lg:w-36 xs:w-28 w-24 bg-[#BC63F2] text-white xl:text-xl lg:text-lg xs:text-sm text-xs xs:font-normal font-medium xs:py-3 py-2 xs:rounded-xl rounded-lg">Personal</button>
             <button
-                class="xl:w-44 lg:w-36 xs:w-28 w-[5.5rem] bg-white text-[#BC63F2] border-solid border-[1px] border-[#BC63F2] xl:text-xl lg:text-lg xs:text-sm text-[10px] xs:font-normal font-medium xs:py-3 py-2 xs:rounded-xl rounded-lg">Medical
+                class="xl:w-44 lg:w-36 xs:w-28 w-24 bg-white text-[#BC63F2] border-solid border-[1px] border-[#BC63F2] xl:text-xl lg:text-lg xs:text-sm text-[11.5px] xs:font-normal font-medium xs:py-3 py-2 xs:rounded-xl rounded-lg">Medical
                 status</button>
             <button
-                class="xl:w-44 lg:w-36 xs:w-28 w-[5.5rem] bg-white text-[#BC63F2] border-solid border-[1px] border-[#BC63F2] xl:text-xl lg:text-lg xs:text-sm text-[10px] xs:font-normal font-medium xs:py-3 py-2 xs:rounded-xl rounded-lg">Habits
+                class="xl:w-44 lg:w-36 xs:w-28 w-24 bg-white text-[#BC63F2] border-solid border-[1px] border-[#BC63F2] xl:text-xl lg:text-lg xs:text-sm text-xs xs:font-normal font-medium xs:py-3 py-2 xs:rounded-xl rounded-lg"">Habits
                 & Diets</button>
         </div>
-        <div class="flex flex-col items-center xl:w-[600px] md:w-[100%] xs:w-[80%] w-[90%] ">
-            <h3 class="w-full lg:text-2xl xs:text-lg text-sm font-bold lg:mb-10 md:mb-8 mb-6">Personal
+        <div class=" flex flex-col items-center xl:w-[600px] md:w-[100%] xs:w-[80%] w-[18rem] ">
+            <h3 class="w-full lg:text-2xl xs:text-lg text-base font-bold lg:mb-10 md:mb-8 mb-6">Personal
                 information</h3>
-            <div class="flex lg:gap-8 md:gap-5 xs:gap-6 gap-3 w-full mb-8">
-                <div class="flex flex-col w-[50%] h-fit border-solid border-b-[1px] border-[#BC63F2]">
-                    <span class="mr-2 mb-0.5 lg:text-[11px] text-[10px]">First Name</span>
-                    <input type="text"
-                        class="w-full xl:pl-8 lg:pl-7 md:pl-6 xs:pl-5 pl-3 pb-1 bg-transparent lg:text-base xs:text-sm text-xs font-semibold outline-none"
-                        autocomplete="off">
-                </div>
-                <div class="flex flex-col w-[50%] h-fit border-solid border-b-[1px] border-[#BC63F2]">
-                    <span class="mr-2 mb-0.5 lg:text-[11px] text-[10px]">Last Name</span>
-                    <input type="text"
-                        class="w-full xl:pl-8 lg:pl-7 md:pl-6 xs:pl-5 pl-3 pb-1 bg-transparent lg:text-base xs:text-sm text-xs font-semibold outline-none"
-                        autocomplete="off">
-                </div>
-            </div>
-            <div class="flex lg:gap-8 md:gap-5 xs:gap-6 gap-3 w-full mb-8">
-                <div class="flex flex-col w-[50%] h-fit border-solid border-b-[1px] border-[#BC63F2]">
-                    <span class="mr-2 mb-0.5 lg:text-[11px] text-[10px]">Date of Birth</span>
-                    <input type="text"
-                        class="w-full xl:pl-8 lg:pl-7 md:pl-6 xs:pl-5 pl-3 pb-1 bg-transparent lg:text-base xs:text-sm text-xs lg:placeholder:text-sm xs:placeholder:text-xs placeholder:text-[10px] font-semibold placeholder:font-normal outline-none"
-                        placeholder="MM/DD/YYYY" autocomplete="off">
-                </div>
-                <div class="flex flex-col w-[50%] h-fit border-solid border-b-[1px] border-[#BC63F2]">
-                    <span class="mr-2 mb-0.5 lg:text-[11px] text-[10px]">Gender</span>
-                    <div class="custom-select w-full lg:text-base xs:text-sm text-xs !font-semibold">
-                        <select autocomplete="off">
-                            <option value="select">Select</option>
-                            <option value="man">Man</option>
-                            <option value="female">Female</option>
-                        </select>
+                <div class="flex lg:gap-8 md:gap-5 xs:gap-6 gap-3 w-full mb-8">
+                    <div class="flex flex-col w-[50%] h-fit border-solid border-b-[1px] border-[#BC63F2]">
+                        <span class="mr-2 mb-0.5 lg:text-sm xs:text-[13px] text-xs">First Name</span>
+                        <input type="text"
+                            class="w-full xl:pl-8 lg:pl-7 md:pl-6 xs:pl-5 pl-3 pb-1 bg-transparent lg:text-base xs:text-sm text-xs font-semibold outline-none"
+                            autocomplete="off">
+                    </div>
+                    <div class="flex flex-col w-[50%] h-fit border-solid border-b-[1px] border-[#BC63F2]">
+                        <span class="mr-2 mb-0.5 lg:text-sm xs:text-[13px] text-xs">Last Name</span>
+                        <input type="text"
+                            class="w-full xl:pl-8 lg:pl-7 md:pl-6 xs:pl-5 pl-3 pb-1 bg-transparent lg:text-base xs:text-sm text-xs font-semibold outline-none"
+                            autocomplete="off">
                     </div>
                 </div>
-            </div>
-            <div class="flex lg:gap-8 md:gap-5 xs:gap-6 gap-3 w-full mb-8">
-                <div class="flex flex-col w-[50%] h-fit border-solid border-b-[1px] border-[#BC63F2]">
-                    <span class="mr-2 mb-0.5 lg:text-[11px] text-[10px]">Email address</span>
-                    <input type="email"
-                        class="w-full xl:pl-8 lg:pl-7 md:pl-6 xs:pl-5 pl-3 pb-1 bg-transparent lg:text-base xs:text-sm text-xs font-semibold outline-none"
-                        autocomplete="off">
-                </div>
-                <div class="flex flex-col w-[50%] h-fit border-solid border-b-[1px] border-[#BC63F2]">
-                    <span class="mr-2 mb-0.5 lg:text-[11px] text-[10px]">Marital status</span>
-                    <div class="custom-select w-full lg:text-base xs:text-sm text-xs !font-semibold">
-                        <select autocomplete="off">
-                            <option value="select">Select</option>
-                            <option value="item1">Item1</option>
-                            <option value="item2">Item2</option>
-                            <option value="item3">Item3</option>
-                        </select>
+                <div class="flex lg:gap-8 md:gap-5 xs:gap-6 gap-3 w-full mb-8">
+                    <div class="flex flex-col w-[50%] h-fit border-solid border-b-[1px] border-[#BC63F2]">
+                        <span class="mr-2 mb-0.5 lg:text-sm xs:text-[13px] text-xs">Date of Birth</span>
+                        <input type="text"
+                            class="w-full xl:pl-8 lg:pl-7 md:pl-6 xs:pl-5 pl-3 pb-1 bg-transparent lg:text-base xs:text-sm text-xs lg:placeholder:text-sm xs:placeholder:text-xs placeholder:text-[10px] font-semibold placeholder:font-normal outline-none"
+                            placeholder="MM/DD/YYYY" autocomplete="off">
+                    </div>
+                    <div class="flex flex-col w-[50%] h-fit border-solid border-b-[1px] border-[#BC63F2]">
+                        <span class="mr-2 mb-0.5 lg:text-sm xs:text-[13px] text-xs">Gender</span>
+                        <div class="custom-select w-full lg:text-base xs:text-sm text-xs !font-semibold">
+                            <select autocomplete="off">
+                                <option value="select">Select</option>
+                                <option value="man">Man</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="flex lg:gap-8 md:gap-5 xs:gap-6 gap-3 w-full mb-8">
-                <div class="flex flex-col w-[50%] h-fit border-solid border-b-[1px] border-[#BC63F2]">
-                    <span class="mr-2 mb-0.5 lg:text-[11px] text-[10px]">Occupation</span>
-                    <input type="text"
-                        class="w-full xl:pl-8 lg:pl-7 md:pl-6 xs:pl-5 pl-3 pb-1 bg-transparent lg:text-base xs:text-sm text-xs font-semibold outline-none"
-                        autocomplete="off">
+                <div class="flex lg:gap-8 md:gap-5 xs:gap-6 gap-3 w-full mb-8">
+                    <div class="flex flex-col w-[50%] h-fit border-solid border-b-[1px] border-[#BC63F2]">
+                        <span class="mr-2 mb-0.5 lg:text-sm xs:text-[13px] text-xs">Email address</span>
+                        <input type="email"
+                            class="w-full xl:pl-8 lg:pl-7 md:pl-6 xs:pl-5 pl-3 pb-1 bg-transparent lg:text-base xs:text-sm text-xs font-semibold outline-none"
+                            autocomplete="off">
+                    </div>
+                    <div class="flex flex-col w-[50%] h-fit border-solid border-b-[1px] border-[#BC63F2]">
+                        <span class="mr-2 mb-0.5 lg:text-sm xs:text-[13px] text-xs">Marital status</span>
+                        <div class="custom-select w-full lg:text-base xs:text-sm text-xs !font-semibold">
+                            <select autocomplete="off">
+                                <option value="select">Select</option>
+                                <option value="item1">Item1</option>
+                                <option value="item2">Item2</option>
+                                <option value="item3">Item3</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex flex-col w-[50%] h-fit border-solid border-b-[1px] border-[#BC63F2]">
-                    <span class="mr-2 mb-0.5 lg:text-[11px] text-[10px]">Phone Number</span>
-                    <input type="tel"
-                        class="w-full xl:pl-8 lg:pl-7 md:pl-6 xs:pl-5 pl-3 pb-1 bg-transparent lg:text-base xs:text-sm text-xs font-semibold tracking-wider outline-none"
-                        autocomplete="off">
+                <div class="flex lg:gap-8 md:gap-5 xs:gap-6 gap-3 w-full mb-8">
+                    <div class="flex flex-col w-[50%] h-fit border-solid border-b-[1px] border-[#BC63F2]">
+                        <span class="mr-2 mb-0.5 lg:text-sm xs:text-[13px] text-xs">Occupation</span>
+                        <input type="text"
+                            class="w-full xl:pl-8 lg:pl-7 md:pl-6 xs:pl-5 pl-3 pb-1 bg-transparent lg:text-base xs:text-sm text-xs font-semibold outline-none"
+                            autocomplete="off">
+                    </div>
+                    <div class="flex flex-col w-[50%] h-fit border-solid border-b-[1px] border-[#BC63F2]">
+                        <span class="mr-2 mb-0.5 lg:text-sm xs:text-[13px] text-xs">Phone Number</span>
+                        <input type="tel"
+                            class="w-full xl:pl-8 lg:pl-7 md:pl-6 xs:pl-5 pl-3 pb-1 bg-transparent lg:text-base xs:text-sm text-xs font-semibold tracking-wider outline-none"
+                            autocomplete="off">
+                    </div>
                 </div>
-            </div>
-            <div class="flex lg:gap-8 md:gap-5 xs:gap-6 gap-3 w-full mb-8">
-                <div class="flex flex-col w-full h-fit border-solid border-b-[1px] border-[#BC63F2]">
-                    <span class="mr-2 mb-0.5 lg:text-[11px] text-[10px]">Address address</span>
-                    <input type="text"
-                        class="w-full xl:pl-8 lg:pl-7 md:pl-6 xs:pl-5 pl-3 pb-1 bg-transparent lg:text-base xs:text-sm text-xs font-semibold outline-none"
-                        autocomplete="off">
+                <div class="flex lg:gap-8 md:gap-5 xs:gap-6 gap-3 w-full mb-8">
+                    <div class="flex flex-col w-full h-fit border-solid border-b-[1px] border-[#BC63F2]">
+                        <span class="mr-2 mb-0.5 lg:text-sm xs:text-[13px] text-xs">Address address</span>
+                        <input type="text"
+                            class="w-full xl:pl-8 lg:pl-7 md:pl-6 xs:pl-5 pl-3 pb-1 bg-transparent lg:text-base xs:text-sm text-xs font-semibold outline-none"
+                            autocomplete="off">
+                    </div>
                 </div>
-            </div>
-            <div class="flex lg:gap-8 md:gap-5 xs:gap-6 gap-3 w-full mb-8">
-                <div class="flex flex-col w-full h-fit border-solid border-b-[1px] border-[#BC63F2]">
-                    <span class="mr-2 mb-0.5 lg:text-[11px] text-[10px]">Address address line 2</span>
-                    <input type="text"
-                        class="w-full xl:pl-8 lg:pl-7 md:pl-6 xs:pl-5 pl-3 pb-1 bg-transparent lg:text-base xs:text-sm text-xs font-semibold outline-none"
-                        autocomplete="off">
+                <div class="flex lg:gap-8 md:gap-5 xs:gap-6 gap-3 w-full mb-8">
+                    <div class="flex flex-col w-full h-fit border-solid border-b-[1px] border-[#BC63F2]">
+                        <span class="mr-2 mb-0.5 lg:text-sm xs:text-[13px] text-xs">Address address line 2</span>
+                        <input type="text"
+                            class="w-full xl:pl-8 lg:pl-7 md:pl-6 xs:pl-5 pl-3 pb-1 bg-transparent lg:text-base xs:text-sm text-xs font-semibold outline-none"
+                            autocomplete="off">
+                    </div>
                 </div>
-            </div>
-            <div class="flex lg:gap-8 md:gap-5 xs:gap-6 gap-3 w-full mb-8">
-                <div class="flex flex-col w-[33%] h-fit border-solid border-b-[1px] border-[#BC63F2]">
-                    <span class="mr-2 mb-0.5 lg:text-[11px] text-[10px]">City</span>
-                    <input type="text"
-                        class="w-full xl:pl-8 lg:pl-7 md:pl-6 xs:pl-5 pl-2 pb-1 bg-transparent lg:text-base xs:text-sm text-xs font-semibold outline-none"
-                        autocomplete="off">
+                <div class="flex lg:gap-8 md:gap-5 xs:gap-6 gap-3 w-full md:mb-14 mb-12">
+                    <div class="flex flex-col w-[33%] h-fit border-solid border-b-[1px] border-[#BC63F2]">
+                        <span class="mr-2 mb-0.5 lg:text-sm xs:text-[13px] text-xs">City</span>
+                        <input type="text"
+                            class="w-full xl:pl-8 lg:pl-7 md:pl-6 xs:pl-5 pl-2 pb-1 bg-transparent lg:text-base xs:text-sm text-xs font-semibold outline-none"
+                            autocomplete="off">
+                    </div>
+                    <div class="flex flex-col w-[33%] h-fit border-solid border-b-[1px] border-[#BC63F2]">
+                        <span class="mr-2 mb-0.5 lg:text-sm xs:text-[13px] text-xs">State</span>
+                        <input type="text"
+                            class="w-full xl:pl-8 lg:pl-7 md:pl-6 xs:pl-5 pl-2 pb-1 bg-transparent lg:text-base xs:text-sm text-xs font-semibold outline-none"
+                            autocomplete="off">
+                    </div>
+                    <div class="flex flex-col w-[33%] h-fit border-solid border-b-[1px] border-[#BC63F2]">
+                        <span class="mr-2 mb-0.5 lg:text-sm xs:text-[13px] text-xs">Country</span>
+                        <input type="text"
+                            class="w-full xl:pl-8 lg:pl-7 md:pl-6 xs:pl-5 pl-2 pb-1 bg-transparent lg:text-base xs:text-sm text-xs font-semibold outline-none"
+                            autocomplete="off">
+                    </div>
                 </div>
-                <div class="flex flex-col w-[33%] h-fit border-solid border-b-[1px] border-[#BC63F2]">
-                    <span class="mr-2 mb-0.5 lg:text-[11px] text-[10px]">State</span>
-                    <input type="text"
-                        class="w-full xl:pl-8 lg:pl-7 md:pl-6 xs:pl-5 pl-2 pb-1 bg-transparent lg:text-base xs:text-sm text-xs font-semibold outline-none"
-                        autocomplete="off">
+                <h3 class="w-full lg:text-2xl xs:text-lg text-sm font-bold lg:mb-10 md:mb-8 mb-6">Emergency Contact</h3>
+                <div class="flex lg:gap-8 md:gap-5 xs:gap-6 gap-3 w-full mb-8">
+                    <div class="flex flex-col w-[50%] h-fit border-solid border-b-[1px] border-[#BC63F2]">
+                        <span class="mr-2 mb-0.5 lg:text-sm xs:text-[13px] text-xs">First Name</span>
+                        <input type="text"
+                            class="w-full xl:pl-8 lg:pl-7 md:pl-6 xs:pl-5 pl-3 pb-1 bg-transparent lg:text-base xs:text-sm text-xs font-semibold outline-none"
+                            autocomplete="off">
+                    </div>
+                    <div class="flex flex-col w-[50%] h-fit border-solid border-b-[1px] border-[#BC63F2]">
+                        <span class="mr-2 mb-0.5 lg:text-sm xs:text-[13px] text-xs">Last Name</span>
+                        <input type="text"
+                            class="w-full xl:pl-8 lg:pl-7 md:pl-6 xs:pl-5 pl-3 pb-1 bg-transparent lg:text-base xs:text-sm text-xs font-semibold outline-none"
+                            autocomplete="off">
+                    </div>
                 </div>
-                <div class="flex flex-col w-[33%] h-fit border-solid border-b-[1px] border-[#BC63F2]">
-                    <span class="mr-2 mb-0.5 lg:text-[11px] text-[10px]">Country</span>
-                    <input type="text"
-                        class="w-full xl:pl-8 lg:pl-7 md:pl-6 xs:pl-5 pl-2 pb-1 bg-transparent lg:text-base xs:text-sm text-xs font-semibold outline-none"
-                        autocomplete="off">
+                <div class="flex lg:gap-8 md:gap-5 xs:gap-6 gap-3 w-full md:mb-12 mb-10">
+                    <div class="flex flex-col w-[50%] h-fit border-solid border-b-[1px] border-[#BC63F2]">
+                        <span class="mr-2 mb-0.5 lg:text-sm xs:text-[13px] text-xs">Relationship</span>
+                        <input type="text"
+                            class="w-full xl:pl-8 lg:pl-7 md:pl-6 xs:pl-5 pl-3 pb-1 bg-transparent lg:text-base xs:text-sm text-xs font-semibold outline-none"
+                            autocomplete="off">
+                    </div>
+                    <div class="flex flex-col w-[50%] h-fit border-solid border-b-[1px] border-[#BC63F2]">
+                        <span class="mr-2 mb-0.5 lg:text-sm xs:text-[13px] text-xs">Phone Number</span>
+                        <input type="tel"
+                            class="w-full xl:pl-8 lg:pl-7 md:pl-6 xs:pl-5 pl-3 pb-1 bg-transparent lg:text-base xs:text-sm text-xs font-semibold tracking-wider outline-none"
+                            autocomplete="off">
+                    </div>
                 </div>
-            </div>
-            <h3 class="w-full lg:text-2xl xs:text-lg text-sm font-bold lg:mb-10 md:mb-8 mb-6">Emergency Contact</h3>
-            <div class="flex lg:gap-8 md:gap-5 xs:gap-6 gap-3 w-full mb-8">
-                <div class="flex flex-col w-[50%] h-fit border-solid border-b-[1px] border-[#BC63F2]">
-                    <span class="mr-2 mb-0.5 lg:text-[11px] text-[10px]">First Name</span>
-                    <input type="text"
-                        class="w-full xl:pl-8 lg:pl-7 md:pl-6 xs:pl-5 pl-3 pb-1 bg-transparent lg:text-base xs:text-sm text-xs font-semibold outline-none"
-                        autocomplete="off">
+                <div class="flex justify-center w-full mb-8 mt-2">
+                    <button
+                        class="lg:w-60 xs:w-48 w-36 bg-[#BC63F2] text-white lg:text-xl xs:text-base text-[13px] xs:font-normal font-medium xs:py-3 py-2.5 xs:rounded-xl rounded-lg">Save
+                        Changes
+                    </button>
                 </div>
-                <div class="flex flex-col w-[50%] h-fit border-solid border-b-[1px] border-[#BC63F2]">
-                    <span class="mr-2 mb-0.5 lg:text-[11px] text-[10px]">Last Name</span>
-                    <input type="text"
-                        class="w-full xl:pl-8 lg:pl-7 md:pl-6 xs:pl-5 pl-3 pb-1 bg-transparent lg:text-base xs:text-sm text-xs font-semibold outline-none"
-                        autocomplete="off">
-                </div>
-            </div>
-            <div class="flex lg:gap-8 md:gap-5 xs:gap-6 gap-3 w-full mb-8">
-                <div class="flex flex-col w-[50%] h-fit border-solid border-b-[1px] border-[#BC63F2]">
-                    <span class="mr-2 mb-0.5 lg:text-[11px] text-[10px]">Relationship</span>
-                    <input type="text"
-                        class="w-full xl:pl-8 lg:pl-7 md:pl-6 xs:pl-5 pl-3 pb-1 bg-transparent lg:text-base xs:text-sm text-xs font-semibold outline-none"
-                        autocomplete="off">
-                </div>
-                <div class="flex flex-col w-[50%] h-fit border-solid border-b-[1px] border-[#BC63F2]">
-                    <span class="mr-2 mb-0.5 lg:text-[11px] text-[10px]">Phone Number</span>
-                    <input type="tel"
-                        class="w-full xl:pl-8 lg:pl-7 md:pl-6 xs:pl-5 pl-3 pb-1 bg-transparent lg:text-base xs:text-sm text-xs font-semibold tracking-wider outline-none"
-                        autocomplete="off">
-                </div>
-            </div>
-            <div class="flex justify-center w-full mb-8 mt-2">
-                <button
-                    class="lg:w-60 xs:w-48 w-36 bg-[#BC63F2] text-white lg:text-xl xs:text-base text-[13px] xs:font-normal font-medium xs:py-3 py-2.5 xs:rounded-xl rounded-lg">Save
-                    Changes
-                </button>
-            </div>
     </main>
 
     <!-- Notifications Mobile -->
@@ -433,44 +477,14 @@
     </div>
 
     <!-- History Desktop -->
-    <div class="md:flex hidden flex-col items-center w-3/12 min-h-screen lg:pt-14 pt-12">
+    <div id="history-desktop"
+        class="fixed right-0 inset-y-0 md:flex hidden flex-col items-center w-3/12 min-h-screen lg:pt-14 pt-12 overflow-y-scroll">
         <div class="relative flex justify-between items-center w-[85%] h-fit mb-7">
             <span class="text-[#181818]/50 lg:text-base text-sm uppercase">Your History</span>
             <img src="./assets/icons/notification.svg" alt="" class="xl:w-10 lg:w-8 w-6 cursor-pointer"
                 onclick="openNotifications_desktop()">
             <span
                 class="absolute right-0 top-0 xl:w-3.5 xl:h-3.5 lg:w-3 lg:h-3 w-2 h-2 bg-[#FF5353] rounded-full"></span>
-            <div id="notifications-desktop"
-                class="absolute xl:right-[65px] lg:right-[57px] right-[45px] top-[-28px] invisible bg-[#fdfdfd] w-96 h-fit lg:p-5 p-4 lg:rounded-2xl rounded-xl border-solid border-[1px] border-gray-200 shadow-xl opacity-0 duration-[0.2s]">
-                <div
-                    class="absolute right-[-10px] top-[30px] w-8 h-8 border-solid border-[#fdfdfd] border-t-[15px] border-r-[15px] rounded-md rotate-45">
-                </div>
-                <div class="flex flex-col lg:gap-2 gap-1.5">
-                    <div
-                        class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-xs text-[10px] text-[#181818] lg:leading-5 leading-4 rounded-xl shadow-lg">
-                        You recieve new agreement sheets. Please check agreements session and sign it. If you have any
-                        question please check help session.
-                    </div>
-                    <div
-                        class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-xs text-[10px] text-[#181818] lg:leading-5 leading-4 rounded-xl shadow-lg">
-                        New daily tasks added to your profile. please check the Tasks session. If you have any question
-                        please check help session.
-                    </div>
-                    <div
-                        class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-xs text-[10px] text-[#181818] lg:leading-5 leading-4 rounded-xl shadow-lg">
-                        Your payment accepted. Check payment session.
-                    </div>
-                    <div
-                        class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-xs text-[10px] text-[#181818] leading-5 rounded-xl shadow-lg opacity-40">
-                        You recieve new agreement sheets. Please check agreements session and sign it. If you have any
-                        question please check help session.
-                    </div>
-                    <div
-                        class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-xs text-[10px] text-[#181818] lg:leading-5 leading-4 rounded-xl shadow-lg opacity-40">
-                        Your payment accepted. Check payment session.
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="flex flex-col lg:gap-4 gap-2.5 w-[85%] mb-7">
             <div
@@ -540,6 +554,37 @@
                     </div>
                     <span class="text-[#0099FF] lg:text-base text-xs font-bold cursor-pointer">View</span>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div id="notifications-desktop"
+        class="absolute xl:right-[90px] lg:right-[84px] right-[69px] lg:top-[30px] top-[20px] invisible md:block hidden bg-[#fdfdfd] w-96 h-fit lg:p-5 p-4 lg:rounded-2xl rounded-xl border-solid border-[1px] border-gray-200 shadow-xl opacity-0 duration-[0.2s]">
+        <div
+            class="absolute right-[-10px] top-[30px] w-8 h-8 border-solid border-[#fdfdfd] border-t-[15px] border-r-[15px] rounded-md rotate-45">
+        </div>
+        <div class="flex flex-col lg:gap-2 gap-1.5">
+            <div
+                class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-xs text-[10px] text-[#181818] lg:leading-5 leading-4 rounded-xl shadow-lg">
+                You recieve new agreement sheets. Please check agreements session and sign it. If you have any
+                question please check help session.
+            </div>
+            <div
+                class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-xs text-[10px] text-[#181818] lg:leading-5 leading-4 rounded-xl shadow-lg">
+                New daily tasks added to your profile. please check the Tasks session. If you have any question
+                please check help session.
+            </div>
+            <div
+                class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-xs text-[10px] text-[#181818] lg:leading-5 leading-4 rounded-xl shadow-lg">
+                Your payment accepted. Check payment session.
+            </div>
+            <div
+                class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-xs text-[10px] text-[#181818] leading-5 rounded-xl shadow-lg opacity-40">
+                You recieve new agreement sheets. Please check agreements session and sign it. If you have any
+                question please check help session.
+            </div>
+            <div
+                class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-xs text-[10px] text-[#181818] lg:leading-5 leading-4 rounded-xl shadow-lg opacity-40">
+                Your payment accepted. Check payment session.
             </div>
         </div>
     </div>

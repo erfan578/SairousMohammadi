@@ -183,75 +183,99 @@
     <!-- Main -->
     <main
         class="flex flex-col md:w-6/12 w-full min-h-screen bg-white 2xl:px-8 px-5 md:pt-16 pt-28 mg:rounded-3xl rounded-none shadow-xl">
-        <div class="md:mb-12 mb-16">
-            <h2 class="lg:text-2xl xs:text-xl text-lg font-bold lg:mb-2.5 xs:mb-1.5 mb-1">Payment</h2>
-            <p class="lg:text-sm text-xs leading-[16px] ml-2">
-                <span class="inline-block w-1 h-1 lg:mr-1.5 mr-1 mb-0.5 bg-black rounded-full"></span>
-                Please make sure that you already complete your information part
-            </p>
-        </div>
-        <div class="flex flex-col items-center">
-            <h3 class="lg:text-2xl xs:text-xl text-lg font-bold lg:mb-10 md:mb-8 mb-6">Select payment method</h3>
-            <div class="flex lg:gap-4 xs:gap-2.5 gap-1.5 xs:mb-10 mb-8">
-                <button
-                    class="xl:w-44 lg:w-36 xs:w-28 w-24 bg-[#BC63F2] text-white xl:text-xl lg:text-lg xs:text-sm text-xs xs:font-normal font-medium xs:py-3 py-2 xs:rounded-xl rounded-lg">Paypal</button>
-                <button
-                    class="xl:w-44 lg:w-36 xs:w-28 w-24 bg-white text-[#BC63F2] border-solid border-[1px] border-[#BC63F2] xl:text-xl lg:text-lg xs:text-sm text-[11.5px] xs:font-normal font-medium xs:py-3 py-2 xs:rounded-xl rounded-lg">Bank
-                    Account</button>
-                <button
-                    class="xl:w-44 lg:w-36 xs:w-28 w-24 bg-white text-[#BC63F2] border-solid border-[1px] border-[#BC63F2] xl:text-xl lg:text-lg xs:text-sm text-xs xs:font-normal font-medium xs:py-3 py-2 xs:rounded-xl rounded-lg">Credit
-                    Card</button>
+        <div class="flex justify-between md:mb-12 mb-16">
+            <div class="flex items-center">
+                <img src="./assets/icons/back.svg" alt="" class="w-6 mr-3 cursor-pointer">
+                <p class="xl:flex hidden">Back to Sairous Website</p>
             </div>
             <div
-                class="flex justify-between xl:w-[34rem] lg:w-[27rem] xs:w-[22rem] w-[18rem] lg:h-10 h-7 lg:mb-8 mb-6 border-solid border-b-[1px] border-[#BC63F2]">
-                <span class="lg:text-sm xs:text-xs text-[11px]">Your card number</span>
-                <div class="flex self-center">
-                    <input type="tel"
-                        class="input-cardNumber numberInput lg:w-14 xs:w-12 w-10 text-center lg:text-base xs:text-sm text-xs font-semibold lg:tracking-[0.2rem] xs:tracking-[0.14rem] tracking-[0.10rem] outline-none"
-                        maxlength="4" autocomplete="off">
-                    <span
-                        class="xl:w-8 lg:w-3 xs:w-1.5 w-1 xl:mx-2 mx-[2px] mb-2 border-solid border-b-[1px] border-black"></span>
-                    <input type="tel"
-                        class="input-cardNumber numberInput lg:w-14 xs:w-12 w-10 text-center lg:text-base xs:text-sm text-xs font-semibold lg:tracking-[0.2rem] xs:tracking-[0.14rem] tracking-[0.10rem] outline-none"
-                        maxlength="4" autocomplete="off">
-                    <span
-                        class="xl:w-8 lg:w-3 xs:w-1.5 w-1 xl:mx-2 mx-[2px] mb-2 border-solid border-b-[1px] border-black"></span>
-                    <input type="tel"
-                        class="input-cardNumber numberInput lg:w-14 xs:w-12 w-10 text-center lg:text-base xs:text-sm text-xs font-semibold lg:tracking-[0.2rem] xs:tracking-[0.14rem] tracking-[0.10rem] outline-none"
-                        maxlength="4" autocomplete="off">
-                    <span
-                        class="xl:w-8 lg:w-3 xs:w-1.5 w-1 xl:mx-2 mx-[2px] mb-2 border-solid border-b-[1px] border-black"></span>
-                    <input type="tel"
-                        class="input-cardNumber numberInput lg:w-14 xs:w-12 w-10 text-center lg:text-base xs:text-sm text-xs font-semibold lg:tracking-[0.2rem] xs:tracking-[0.14rem] tracking-[0.10rem] outline-none"
-                        maxlength="4" autocomplete="off">
+                class="flex md:px-3 md:py-2 px-2 py-1.5 md:text-base text-sm border-solid border-[1px] border-[#062635] rounded-full">
+                <input type="text" placeholder="Search in chat history" class="md:w-48 w-44 pr-3 outline-none">
+                <img src="./assets/icons/search.svg" alt="" class="md:w-5 w-4 cursor-pointer">
+            </div>
+        </div>
+        <div class="flex flex-col md:gap-5 gap-3">
+            <div>
+                <div class="flex items-center md:mb-2.5 mb-1">
+                    <img src="./assets/images/doctor.png" alt="" class="md:w-20 w-16 md:mr-4 mr-2">
+                    <div>
+                        <h2 class="lg:text-xl md:text-lg xs:text-base text-[15px] font-bold md:mb-1 -mb-1">Dr. Sairous
+                            Mohammadi</h2>
+                        <span class="text-[#181818]/50 md:text-sm xs:text-xs text-[10px]">Doctor of Phylosophy in
+                            Metaphysic</span>
+                    </div>
+                </div>
+                <div class="flex flex-col md:gap-1.5 gap-1 xl:ml-24 md:ml-0 xs:ml-[4.5rem] ml-0">
+                    <p
+                        class="w-fit bg-[#BC63F2] py-1.5 px-3.5 text-white md:text-base xs:text-sm text-xs md:rounded-3xl rounded-xl">
+                        Hello, Dear Jane!
+                    </p>
+                    <p
+                        class="w-fit bg-[#BC63F2] py-1.5 px-3.5 text-white md:text-base xs:text-sm text-xs md:rounded-3xl rounded-xl">
+                        Welcome to my website.
+                    </p>
+                    <p
+                        class="w-fit bg-[#BC63F2] py-1.5 px-3.5 text-white md:text-base xs:text-sm text-xs md:rounded-3xl rounded-xl">
+                        You can write me your problem
+                    </p>
+                    <p
+                        class="w-fit bg-[#BC63F2] py-1.5 px-3.5 text-white md:text-base xs:text-sm text-xs md:rounded-3xl rounded-xl">
+                        I’ll help you how to book time to
+                        have a meeting with me
+                    </p>
                 </div>
             </div>
-            <div class="flex justify-between xl:w-[34rem] lg:w-[27rem] xs:w-[22rem] w-[18rem] lg:mb-14 md:mb-11 mb-10">
-                <div
-                    class="cvv2 flex justify-between lg:w-[8rem] xs:w-[6rem] w-[5.25rem] md:h-8 h-7 border-solid border-b-[1px] border-[#BC63F2]">
-                    <span class="lg:text-sm xs:text-xs text-[11px]">CVV2</span>
-                    <input type="tel"
-                        class="numberInput lg:w-14 xs:w-12 w-11 text-center lg:text-base xs:text-sm text-xs font-semibold lg:tracking-[0.2rem] xs:tracking-[0.15rem] tracking-[0.12rem] outline-none"
-                        maxlength="4" autocomplete="off">
+            <div>
+                <div class="flex justify-end items-center md:mb-2.5 mb-1">
+                    <div>
+                        <h2 class="lg:text-xl md:text-lg xs:text-base text-[15px] font-bold md:mb-1 -mb-1">Jane Cooper
+                        </h2>
+                        <span class="text-[#181818]/50 md:text-sm xs:text-xs text-[10px]">Join 27 September 2022</span>
+                    </div>
+                    <img src="./assets/images/profile.png" alt="" class="md:w-20 w-16 md:ml-4 ml-2">
                 </div>
-                <div
-                    class="year flex justify-between lg:w-[8rem] xs:w-[6rem] w-[5.25rem] md:h-8 h-7 border-solid border-b-[1px] border-[#BC63F2]">
-                    <span class="lg:text-sm xs:text-xs text-[11px]">Year</span>
-                    <input type="tel"
-                        class="numberInput lg:w-14 xs:w-12 w-11 text-center lg:text-base xs:text-sm text-xs font-semibold lg:tracking-[0.2rem] xs:tracking-[0.15rem] tracking-[0.12rem] outline-none"
-                        maxlength="2" autocomplete="off">
-                </div>
-                <div
-                    class="month flex justify-between lg:w-[8rem] xs:w-[6rem] w-[5.25rem] md:h-8 h-7 border-solid border-b-[1px] border-[#BC63F2]">
-                    <span class="lg:text-sm xs:text-xs text-[11px]">Month</span>
-                    <input type="tel"
-                        class="numberInput lg:w-14 xs:w-12 w-11 text-center lg:text-base xs:text-sm text-xs font-semibold lg:tracking-[0.2rem] xs:tracking-[0.15rem] tracking-[0.12rem] outline-none"
-                        maxlength="2" autocomplete="off">
+                <div class="flex flex-col items-end md:gap-1.5 gap-1 xl:ml-24 md:ml-0 xs:ml-[4.5rem] ml-0">
+                    <p
+                        class="w-fit bg-[#29CC6A] py-1.5 px-3.5 text-white md:text-base xs:text-sm text-xs md:rounded-3xl rounded-xl">
+                        Hello Dr. Sairous
+                    </p>
+                    <p
+                        class="w-fit bg-[#29CC6A] py-1.5 px-3.5 text-white md:text-base xs:text-sm text-xs md:rounded-3xl rounded-xl">
+                        I have Aerophobia and need your
+                        to have a meet with you to solve
+                        my problem :((
+                    </p>
                 </div>
             </div>
-            <button
-                class="lg:w-60 xs:w-48 w-36 bg-[#BC63F2] text-white lg:text-xl xs:text-base text-sm xs:font-normal font-medium xs:py-3 py-2.5 mb-10 xs:rounded-xl rounded-lg">Pay
-                Now</button>
+            <div>
+                <div class="flex items-center md:mb-2.5 mb-1">
+                    <img src="./assets/images/doctor.png" alt="" class="md:w-20 w-16 md:mr-4 mr-2">
+                    <div>
+                        <h2 class="lg:text-xl md:text-lg xs:text-base text-[15px] font-bold md:mb-1 -mb-1">Dr. Sairous
+                            Mohammadi</h2>
+                        <span class="text-[#181818]/50 md:text-sm xs:text-xs text-[10px]">Doctor of Phylosophy in
+                            Metaphysic</span>
+                    </div>
+                </div>
+                <div class="flex flex-col md:gap-1.5 gap-1 xl:ml-24 md:ml-0 xs:ml-[4.5rem] ml-0">
+                    <p
+                        class="w-fit bg-[#BC63F2] py-1.5 px-3.5 text-white md:text-base xs:text-sm text-xs md:rounded-3xl rounded-xl">
+                        Hello, Dear Jane!
+                    </p>
+                    <p
+                        class="w-fit bg-[#BC63F2] py-1.5 px-3.5 text-white md:text-base xs:text-sm text-xs md:rounded-3xl rounded-xl">
+                        Welcome to my website.
+                    </p>
+                    <span class="text-[#181818]/50 md:text-[13px] xs:text-[11px] text-[9px] md:ml-4 ml-2.5">Dr. Sairous is typing...</span>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col items-end md:mb-10 mb-6">
+            <img src="./assets/icons/plus.svg" alt="" class="md:w-7 w-5 md:mb-2.5 mb-1.5 cursor-pointer">
+            <div class="flex justify-between w-full md:px-7 px-3 md:py-4 py-2 border-solid border-[1px] border-[#062635] md:rounded-xl rounded-lg">
+                <input type="text" placeholder="Write your message" class="w-full md:text-base text-sm md:pr-3 pr-1.5 outline-none">
+                <img src="./assets/icons/send.svg" alt="" class="md:w-7 w-5 cursor-pointer">
+            </div>
         </div>
     </main>
 
