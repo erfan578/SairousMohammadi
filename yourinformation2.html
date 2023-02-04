@@ -5,41 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="./tailwind/output.css">
-    <style>
-        #menu-desktop::-webkit-scrollbar {
-            width: 5px;
-            scroll-margin-right: 10px;
-        }
-
-        #menu-desktop::-webkit-scrollbar-track {
-            background: transparent;
-        }
-
-        #menu-desktop::-webkit-scrollbar-thumb {
-            background: #a3a3a3;
-            border-radius: 100px;
-            scroll-margin-right: 10px;
-        }
-
-        #history-desktop::-webkit-scrollbar {
-            width: 5px;
-            scroll-margin-right: 10px;
-        }
-
-        #history-desktop::-webkit-scrollbar-track {
-            background: transparent;
-        }
-
-        #history-desktop::-webkit-scrollbar-thumb {
-            background: #a3a3a3;
-            border-radius: 100px;
-            scroll-margin-right: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="./assets/styles/main.css">
     <style>
         .custom-select {
             position: relative;
@@ -128,7 +95,7 @@
             background-color: rgba(0, 0, 0, 0.1);
         }
     </style>
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <title>Your Information</title>
 </head>
 
@@ -512,29 +479,29 @@
                 <span>
         </button>
         <div id="notifications-mobile"
-            class="absolute right-[45px] top-[58px] invisible bg-[#fdfdfd] w-[220px] h-fit p-3.5 rounded-xl border-solid border-[1px] border-gray-200 shadow-xl opacity-0 duration-[0.2s]">
+            class="absolute right-[45px] top-[58px] invisible bg-[#fdfdfd] xs:w-[350px] w-[80vw] h-fit p-3.5 rounded-xl border-solid border-[1px] border-gray-200 shadow-xl opacity-0 duration-[0.2s]">
             <div
                 class="absolute right-[20px] top-[-7px] w-5 h-5 border-solid border-[#fdfdfd] border-t-[15px] border-r-[15px] rounded-[0.25rem] -rotate-45 shadow-[3px_-3px_7px_#f2f2f2]">
             </div>
             <div class="flex flex-col lg:gap-2 gap-1.5">
-                <div class="px-2.5 py-2 bg-[#29CC6A] text-[9px] text-[#181818] leading-[14px] rounded-xl shadow-lg">
+                <div class="px-2.5 py-2 bg-[#29CC6A] text-[11px] text-[#181818] leading-[15px] rounded-xl shadow-lg">
                     You recieve new agreement sheets. Please check agreements session and sign it. If you have any
                     question please check help session.
                 </div>
-                <div class="px-2.5 py-2 bg-[#29CC6A] text-[9px] text-[#181818] leading-[14px] rounded-xl shadow-lg">
+                <div class="px-2.5 py-2 bg-[#29CC6A] text-[11px] text-[#181818] leading-[15px] rounded-xl shadow-lg">
                     New daily tasks added to your profile. please check the Tasks session. If you have any question
                     please check help session.
                 </div>
-                <div class="px-2.5 py-2 bg-[#29CC6A] text-[9px] text-[#181818] leading-[14px] rounded-xl shadow-lg">
+                <div class="px-2.5 py-2 bg-[#29CC6A] text-[11px] text-[#181818] leading-[15px] rounded-xl shadow-lg">
                     Your payment accepted. Check payment session.
                 </div>
                 <div
-                    class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-xs text-[10px] text-[#181818] leading-[14px] rounded-xl shadow-lg opacity-40">
+                    class="lg:p-3 px-3 py-2 bg-[#29CC6A] text-[11px] text-[#181818] leading-[15px] rounded-xl shadow-lg opacity-40">
                     You recieve new agreement sheets. Please check agreements session and sign it. If you have any
                     question please check help session.
                 </div>
                 <div
-                    class="px-2.5 py-2 bg-[#29CC6A] text-[9px] text-[#181818] leading-[14px] rounded-xl shadow-lg opacity-40">
+                    class="px-2.5 py-2 bg-[#29CC6A] text-[11px] text-[#181818] leading-[15px] rounded-xl shadow-lg opacity-40">
                     Your payment accepted. Check payment session.
                 </div>
             </div>
@@ -623,32 +590,32 @@
         </div>
     </div>
     <div id="notifications-desktop"
-        class="absolute xl:right-[90px] lg:right-[84px] right-[69px] lg:top-[30px] top-[20px] invisible md:block hidden bg-[#fdfdfd] w-96 h-fit lg:p-5 p-4 lg:rounded-2xl rounded-xl border-solid border-[1px] border-gray-200 shadow-xl opacity-0 duration-[0.2s]">
+        class="fixed xl:right-[90px] lg:right-[84px] right-[69px] lg:top-[30px] top-[20px] invisible md:block hidden bg-[#fdfdfd] w-96 h-fit lg:p-5 p-4 lg:rounded-2xl rounded-xl border-solid border-[1px] border-gray-200 shadow-xl opacity-0 duration-[0.2s]">
         <div
             class="absolute right-[-10px] top-[30px] w-8 h-8 border-solid border-[#fdfdfd] border-t-[15px] border-r-[15px] rounded-md rotate-45">
         </div>
         <div class="flex flex-col lg:gap-2 gap-1.5">
             <div
-                class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-xs text-[10px] text-[#181818] lg:leading-5 leading-4 rounded-xl shadow-lg">
+                class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-sm text-xs text-[#181818] lg:leading-5 leading-4 rounded-xl shadow-lg">
                 You recieve new agreement sheets. Please check agreements session and sign it. If you have any
                 question please check help session.
             </div>
             <div
-                class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-xs text-[10px] text-[#181818] lg:leading-5 leading-4 rounded-xl shadow-lg">
+                class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-sm text-xs text-[#181818] lg:leading-5 leading-4 rounded-xl shadow-lg">
                 New daily tasks added to your profile. please check the Tasks session. If you have any question
                 please check help session.
             </div>
             <div
-                class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-xs text-[10px] text-[#181818] lg:leading-5 leading-4 rounded-xl shadow-lg">
+                class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-sm text-xs text-[#181818] lg:leading-5 leading-4 rounded-xl shadow-lg">
                 Your payment accepted. Check payment session.
             </div>
             <div
-                class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-xs text-[10px] text-[#181818] leading-5 rounded-xl shadow-lg opacity-40">
+                class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-sm text-xs text-[#181818] leading-5 rounded-xl shadow-lg opacity-40">
                 You recieve new agreement sheets. Please check agreements session and sign it. If you have any
                 question please check help session.
             </div>
             <div
-                class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-xs text-[10px] text-[#181818] lg:leading-5 leading-4 rounded-xl shadow-lg opacity-40">
+                class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-sm text-xs text-[#181818] lg:leading-5 leading-4 rounded-xl shadow-lg opacity-40">
                 Your payment accepted. Check payment session.
             </div>
         </div>

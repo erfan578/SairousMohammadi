@@ -5,42 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="./tailwind/output.css">
-    <style>
-        #menu-desktop::-webkit-scrollbar {
-            width: 5px;
-            scroll-margin-right: 10px;
-        }
-
-        #menu-desktop::-webkit-scrollbar-track {
-            background: transparent;
-        }
-
-        #menu-desktop::-webkit-scrollbar-thumb {
-            background: #a3a3a3;
-            border-radius: 100px;
-            scroll-margin-right: 10px;
-        }
-
-        #history-desktop::-webkit-scrollbar {
-            width: 5px;
-            scroll-margin-right: 10px;
-        }
-
-        #history-desktop::-webkit-scrollbar-track {
-            background: transparent;
-        }
-
-        #history-desktop::-webkit-scrollbar-thumb {
-            background: #a3a3a3;
-            border-radius: 100px;
-            scroll-margin-right: 10px;
-        }
-    </style>
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <link rel="stylesheet" href="./assets/styles/main.css">
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <title>Payments</title>
 </head>
 
@@ -100,8 +67,8 @@
                 </dd>
             </dl>
         </div>
-        <div
-            class="w-5/6 flex lg:flex-row flex-col-reverse items-center bg-[#FFFCAA]/50 py-4 px-5 rounded-2xl lg:mb-8 mb-6">
+        <div class="w-5/6 flex lg:flex-row flex-col-reverse items-center bg-[#FFFCAA]/50 py-4 px-5 rounded-2xl lg:mb-8 mb-6 cursor-pointer"
+            onclick="openModal1()">
             <p class="text-[#181818]/50 lg:text-left text-center lg:text-sm text-xs font-medium mr-3">
                 By click on this icon, we guide you, how can you use this website step by step
             </p>
@@ -172,10 +139,9 @@
                 </dl>
             </div>
             <div class="w-5/6 flex lg:flex-row items-center bg-[#FFFCAA]/50 py-4 px-5 rounded-2xl lg:mb-8 mb-6">
-                <p class="text-[#181818]/50 text-[11px] font-medium mr-3">
+                <p class="text-[#181818]/70 text-xs font-medium">
                     By click on this icon, we guide you, how can you use this website step by step
                 </p>
-                <img src="./assets/icons/question.svg" alt="" class="w-9">
             </div>
         </nav>
     </div>
@@ -266,15 +232,133 @@
                         class="w-fit bg-[#BC63F2] py-1.5 px-3.5 text-white md:text-base xs:text-sm text-xs md:rounded-3xl rounded-xl">
                         Welcome to my website.
                     </p>
-                    <span class="text-[#181818]/50 md:text-[13px] xs:text-[11px] text-[9px] md:ml-4 ml-2.5">Dr. Sairous is typing...</span>
+                    <span class="text-[#181818]/50 md:text-[13px] xs:text-[11px] text-[9px] md:ml-4 ml-2.5">Dr. Sairous
+                        is typing...</span>
                 </div>
             </div>
         </div>
         <div class="flex flex-col items-end md:mb-10 mb-6">
             <img src="./assets/icons/plus.svg" alt="" class="md:w-7 w-5 md:mb-2.5 mb-1.5 cursor-pointer">
-            <div class="flex justify-between w-full md:px-7 px-3 md:py-4 py-2 border-solid border-[1px] border-[#062635] md:rounded-xl rounded-lg">
-                <input type="text" placeholder="Write your message" class="w-full md:text-base text-sm md:pr-3 pr-1.5 outline-none">
+            <div
+                class="flex justify-between w-full md:px-7 px-3 md:py-4 py-2 border-solid border-[1px] border-[#062635] md:rounded-xl rounded-lg">
+                <input type="text" placeholder="Write your message"
+                    class="w-full md:text-base text-sm md:pr-3 pr-1.5 outline-none">
                 <img src="./assets/icons/send.svg" alt="" class="md:w-7 w-5 cursor-pointer">
+            </div>
+        </div>
+        <div id="modal1" class="invisible fixed inset-0 z-10 bg-black/60">
+            <div
+                class="box absolute inset-y-0 md:inset-x-[25%] inset-x-[10%] bg-white md:p-7 md:pt-14 p-4 pt-10 md:rounded-t-2xl rounded-t-xl">
+                <button class="absolute md:right-4 right-3 md:top-4 top-3" onclick="closeModal1()">
+                    <img src="./assets/icons/close.svg" alt="" class="invert">
+                </button>
+                <div class="w-full h-52 bg-[#29CC6A] md:mb-5 mb-3 md:rounded-xl rounded-lg shadow-lg"></div>
+                <div class="grid lg:grid-cols-[repeat(3,_auto)] grid-cols-[repeat(2,_auto)] md:gap-4 gap-3">
+                    <div class="flex flex-col justify-center items-center h-24 md:p-4 p-2.5 bg-white md:rounded-xl rounded-lg shadow-md cursor-pointer"
+                        onclick="openModal2()">
+                        <h3 class="md:text-xl text-base font-bold">How to</h3>
+                        <p class="md:text-sm text-xs font-medium text-center">Edit Informations</p>
+                    </div>
+                    <div class="flex flex-col justify-center items-center h-24 md:p-4 p-2.5 bg-[#BC63F2] text-white md:rounded-xl rounded-lg shadow-md cursor-pointer"
+                        onclick="openModal2()">
+                        <h3 class="md:text-xl text-base font-bold">How to</h3>
+                        <p class="md:text-sm text-xs font-medium text-center">Edit Informations</p>
+                    </div>
+                    <div class="flex flex-col justify-center items-center h-24 md:p-4 p-2.5 bg-white md:rounded-xl rounded-lg shadow-md cursor-pointer"
+                        onclick="openModal2()">
+                        <h3 class="md:text-xl text-base font-bold">How to</h3>
+                        <p class="md:text-sm text-xs font-medium text-center">Edit Informations</p>
+                    </div>
+                    <div class="flex flex-col justify-center items-center h-24 md:p-4 p-2.5 bg-white md:rounded-xl rounded-lg shadow-md cursor-pointer"
+                        onclick="openModal2()">
+                        <h3 class="md:text-xl text-base font-bold">How to</h3>
+                        <p class="md:text-sm text-xs font-medium text-center">Edit Informations</p>
+                    </div>
+                    <div class="flex flex-col justify-center items-center h-24 md:p-4 p-2.5 bg-white md:rounded-xl rounded-lg shadow-md cursor-pointer"
+                        onclick="openModal2()">
+                        <h3 class="md:text-xl text-base font-bold">How to</h3>
+                        <p class="md:text-sm text-xs font-medium text-center">Edit Informations</p>
+                    </div>
+                    <div class="flex flex-col justify-center items-center h-24 md:p-4 p-2.5 bg-white md:rounded-xl rounded-lg shadow-md cursor-pointer"
+                        onclick="openModal2()">
+                        <h3 class="md:text-xl text-base font-bold">How to</h3>
+                        <p class="md:text-sm text-xs font-medium text-center">Edit Informations</p>
+                    </div>
+                    <div class="flex flex-col justify-center items-center h-24 md:p-4 p-2.5 bg-white md:rounded-xl rounded-lg shadow-md cursor-pointer"
+                        onclick="openModal2()">
+                        <h3 class="md:text-xl text-base font-bold">How to</h3>
+                        <p class="md:text-sm text-xs font-medium text-center">Edit Informations</p>
+                    </div>
+                    <div class="flex flex-col justify-center items-center h-24 md:p-4 p-2.5 bg-white md:rounded-xl rounded-lg shadow-md cursor-pointer"
+                        onclick="openModal2()">
+                        <h3 class="md:text-xl text-base font-bold">How to</h3>
+                        <p class="md:text-sm text-xs font-medium text-center">Edit Informations</p>
+                    </div>
+                    <div class="flex flex-col justify-center items-center h-24 md:p-4 p-2.5 bg-white md:rounded-xl rounded-lg shadow-md cursor-pointer"
+                        onclick="openModal2()">
+                        <h3 class="md:text-xl text-base font-bold">How to</h3>
+                        <p class="md:text-sm text-xs font-medium text-center">Edit Informations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal2" class="invisible fixed inset-0 z-10 bg-black/60">
+            <div
+                class="box absolute inset-y-[10%] lg:inset-x-[25%] md:inset-x-[18%] inset-x-[10%] bg-white md:p-7 md:pt-14 p-4 pt-10  md:rounded-2xl rounded-xl">
+                <button class="absolute md:right-4 right-3 md:top-4 top-3" onclick="closeModal2()">
+                    <img src="./assets/icons/close.svg" alt="" class="invert">
+                </button>
+                <div
+                    class="scrollbar flex flex-col md:gap-5 gap-3 h-full xl:pr-24 lg:pr-20 md:pr-16 xs:pr-10 pr-5 overflow-y-scroll">
+                    <div class="grid grid-cols-[repeat(2,_auto)]">
+                        <div
+                            class="md:w-32 xs:w-24 w-20 md:h-32 xs:h-24 h-20 md:mr-5 mr-3 md:rounded-xl rounded-lg bg-[#D9D9D9]">
+                        </div>
+                        <p class="md:text-sm text-xs font-medium">Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas purus
+                            viverra accumsan in nisl nisi.</p>
+                    </div>
+                    <div class="grid grid-cols-[repeat(2,_auto)]">
+                        <div
+                            class="md:w-32 xs:w-24 w-20 md:h-32 xs:h-24 h-20 md:mr-5 mr-3 md:rounded-xl rounded-lg bg-[#D9D9D9]">
+                        </div>
+                        <p class="md:text-sm text-xs font-medium">Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas purus
+                            viverra accumsan in nisl nisi.</p>
+                    </div>
+                    <div class="grid grid-cols-[repeat(2,_auto)]">
+                        <div
+                            class="md:w-32 xs:w-24 w-20 md:h-32 xs:h-24 h-20 md:mr-5 mr-3 md:rounded-xl rounded-lg bg-[#D9D9D9]">
+                        </div>
+                        <p class="md:text-sm text-xs font-medium">Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas purus
+                            viverra accumsan in nisl nisi.</p>
+                    </div>
+                    <div class="grid grid-cols-[repeat(2,_auto)]">
+                        <div
+                            class="md:w-32 xs:w-24 w-20 md:h-32 xs:h-24 h-20 md:mr-5 mr-3 md:rounded-xl rounded-lg bg-[#D9D9D9]">
+                        </div>
+                        <p class="md:text-sm text-xs font-medium">Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas purus
+                            viverra accumsan in nisl nisi.</p>
+                    </div>
+                    <div class="grid grid-cols-[repeat(2,_auto)]">
+                        <div
+                            class="md:w-32 xs:w-24 w-20 md:h-32 xs:h-24 h-20 md:mr-5 mr-3 md:rounded-xl rounded-lg bg-[#D9D9D9]">
+                        </div>
+                        <p class="md:text-sm text-xs font-medium">Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas purus
+                            viverra accumsan in nisl nisi.</p>
+                    </div>
+                    <div class="grid grid-cols-[repeat(2,_auto)]">
+                        <div
+                            class="md:w-32 xs:w-24 w-20 md:h-32 xs:h-24 h-20 md:mr-5 mr-3 md:rounded-xl rounded-lg bg-[#D9D9D9]">
+                        </div>
+                        <p class="md:text-sm text-xs font-medium">Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas purus
+                            viverra accumsan in nisl nisi.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -287,29 +371,29 @@
                 <span>
         </button>
         <div id="notifications-mobile"
-            class="absolute right-[45px] top-[58px] invisible bg-[#fdfdfd] w-[220px] h-fit p-3.5 rounded-xl border-solid border-[1px] border-gray-200 shadow-xl opacity-0 duration-[0.2s]">
+            class="absolute right-[45px] top-[58px] invisible bg-[#fdfdfd] xs:w-[350px] w-[80vw] h-fit p-3.5 rounded-xl border-solid border-[1px] border-gray-200 shadow-xl opacity-0 duration-[0.2s]">
             <div
                 class="absolute right-[20px] top-[-7px] w-5 h-5 border-solid border-[#fdfdfd] border-t-[15px] border-r-[15px] rounded-[0.25rem] -rotate-45 shadow-[3px_-3px_7px_#f2f2f2]">
             </div>
             <div class="flex flex-col lg:gap-2 gap-1.5">
-                <div class="px-2.5 py-2 bg-[#29CC6A] text-[9px] text-[#181818] leading-[14px] rounded-xl shadow-lg">
+                <div class="px-2.5 py-2 bg-[#29CC6A] text-[11px] text-[#181818] leading-[15px] rounded-xl shadow-lg">
                     You recieve new agreement sheets. Please check agreements session and sign it. If you have any
                     question please check help session.
                 </div>
-                <div class="px-2.5 py-2 bg-[#29CC6A] text-[9px] text-[#181818] leading-[14px] rounded-xl shadow-lg">
+                <div class="px-2.5 py-2 bg-[#29CC6A] text-[11px] text-[#181818] leading-[15px] rounded-xl shadow-lg">
                     New daily tasks added to your profile. please check the Tasks session. If you have any question
                     please check help session.
                 </div>
-                <div class="px-2.5 py-2 bg-[#29CC6A] text-[9px] text-[#181818] leading-[14px] rounded-xl shadow-lg">
+                <div class="px-2.5 py-2 bg-[#29CC6A] text-[11px] text-[#181818] leading-[15px] rounded-xl shadow-lg">
                     Your payment accepted. Check payment session.
                 </div>
                 <div
-                    class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-xs text-[10px] text-[#181818] leading-[14px] rounded-xl shadow-lg opacity-40">
+                    class="lg:p-3 px-3 py-2 bg-[#29CC6A] text-[11px] text-[#181818] leading-[15px] rounded-xl shadow-lg opacity-40">
                     You recieve new agreement sheets. Please check agreements session and sign it. If you have any
                     question please check help session.
                 </div>
                 <div
-                    class="px-2.5 py-2 bg-[#29CC6A] text-[9px] text-[#181818] leading-[14px] rounded-xl shadow-lg opacity-40">
+                    class="px-2.5 py-2 bg-[#29CC6A] text-[11px] text-[#181818] leading-[15px] rounded-xl shadow-lg opacity-40">
                     Your payment accepted. Check payment session.
                 </div>
             </div>
@@ -398,32 +482,32 @@
         </div>
     </div>
     <div id="notifications-desktop"
-        class="absolute xl:right-[90px] lg:right-[84px] right-[69px] lg:top-[30px] top-[20px] invisible md:block hidden bg-[#fdfdfd] w-96 h-fit lg:p-5 p-4 lg:rounded-2xl rounded-xl border-solid border-[1px] border-gray-200 shadow-xl opacity-0 duration-[0.2s]">
+        class="fixed xl:right-[90px] lg:right-[84px] right-[69px] lg:top-[30px] top-[20px] invisible md:block hidden bg-[#fdfdfd] w-96 h-fit lg:p-5 p-4 lg:rounded-2xl rounded-xl border-solid border-[1px] border-gray-200 shadow-xl opacity-0 duration-[0.2s]">
         <div
             class="absolute right-[-10px] top-[30px] w-8 h-8 border-solid border-[#fdfdfd] border-t-[15px] border-r-[15px] rounded-md rotate-45">
         </div>
         <div class="flex flex-col lg:gap-2 gap-1.5">
             <div
-                class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-xs text-[10px] text-[#181818] lg:leading-5 leading-4 rounded-xl shadow-lg">
+                class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-sm text-xs text-[#181818] lg:leading-5 leading-4 rounded-xl shadow-lg">
                 You recieve new agreement sheets. Please check agreements session and sign it. If you have any
                 question please check help session.
             </div>
             <div
-                class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-xs text-[10px] text-[#181818] lg:leading-5 leading-4 rounded-xl shadow-lg">
+                class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-sm text-xs text-[#181818] lg:leading-5 leading-4 rounded-xl shadow-lg">
                 New daily tasks added to your profile. please check the Tasks session. If you have any question
                 please check help session.
             </div>
             <div
-                class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-xs text-[10px] text-[#181818] lg:leading-5 leading-4 rounded-xl shadow-lg">
+                class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-sm text-xs text-[#181818] lg:leading-5 leading-4 rounded-xl shadow-lg">
                 Your payment accepted. Check payment session.
             </div>
             <div
-                class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-xs text-[10px] text-[#181818] leading-5 rounded-xl shadow-lg opacity-40">
+                class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-sm text-xs text-[#181818] leading-5 rounded-xl shadow-lg opacity-40">
                 You recieve new agreement sheets. Please check agreements session and sign it. If you have any
                 question please check help session.
             </div>
             <div
-                class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-xs text-[10px] text-[#181818] lg:leading-5 leading-4 rounded-xl shadow-lg opacity-40">
+                class="lg:p-3 px-3 py-2 bg-[#29CC6A] lg:text-sm text-xs text-[#181818] lg:leading-5 leading-4 rounded-xl shadow-lg opacity-40">
                 Your payment accepted. Check payment session.
             </div>
         </div>
@@ -528,15 +612,40 @@
 <script src="./assets/js/history.js"></script>
 
 <script>
-    $(".numberInput").on('input', function (e) {
-        $(this).val($(this).val().replace(/[^0-9]/g, ''));
-    });
+    const modal1 = document.getElementById("modal1");
+    const modal2 = document.getElementById("modal2");
 
-    $(".input-cardNumber").bind("input", function () {
-        var $this = $(this);
-        setTimeout(function () {
-            if ($this.val().length >= parseInt($this.attr("maxlength"), 10))
-                $this.next("span").next(".input-cardNumber").focus();
-        }, 0);
+    function openModal1() {
+        setTimeout(() => {
+            modal1.style.visibility = "visible";
+        }, 10);
+    }
+    function closeModal1() {
+        modal1.style.visibility = "hidden";
+    }
+
+    function openModal2() {
+        setTimeout(() => {
+            modal1.style.visibility = "hidden";
+            modal2.style.visibility = "visible";
+        }, 10);
+    }
+    function closeModal2() {
+        modal2.style.visibility = "hidden";
+    }
+
+    $(document).click(function (event) {
+        var $target = $(event.target);
+        if (!$target.closest('#modal1 .box').length &&
+            $('#modal1').css('visibility') == 'visible') {
+            closeModal1();
+        }
+    });
+    $(document).click(function (event) {
+        var $target = $(event.target);
+        if (!$target.closest('#modal2 .box').length &&
+            $('#modal2').css('visibility') == 'visible') {
+            closeModal2();
+        }
     });
 </script>
